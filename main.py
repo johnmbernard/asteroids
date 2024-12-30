@@ -8,8 +8,11 @@ def main():
     print(f"Screen height: {SCREEN_HEIGHT}")
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.time.Clock
+    dt = 0
     while True:
-        pygame.time.wait(100)
+        Clock.tick(60)
+        dt = Clock.get_time()/1000
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
